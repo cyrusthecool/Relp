@@ -1,0 +1,17 @@
+<div class= 'bimage'>
+
+
+<h1 class="rname">All Nationalities</h1>
+
+<% @nationalities.each do |nationality| %>
+  <p>
+    <%= link_to nationality.name, nationality_path(nationality.id) , :class=> "rlink" %>
+
+<% end %>
+
+<% if @current_user.present? && @current_user.admin? %>
+<div class="controls">
+  <%= link_to "New Nationality", new_nationality_path(@nationality) %>
+</div>
+<% end %>
+</div>

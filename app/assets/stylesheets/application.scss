@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.*/
+
+
+ @import 'bootstrap';
+
+ body {
+   width: 100%;
+   height: 100%;
+   // background:url("https://i.imgur.com/w6W0Z4Q.jpg");
+
+ }
+
+ #map {
+   height: 50vw;
+   width: 80vh;
+   border-radius: 30px;
+   // overflow: hidden!important;
+ }
+
+.feature {
+  height: 50vw;
+  border-radius: 30px;
+  border: 5px;
+  // width: 50vh;
+}
+.rname {
+        color:white;
+        font-style: italic;
+}
+.rlink {
+        color:orange;
+        font-size: 25px;
+        font-style: oblique;
+}
+
+.rtext {
+        color:white;
+        font-size: 25px;
+        font-style: oblique;
+}
+.stext {
+        color: orange;
+        font-size: 25px;
+        font-style: oblique;
+}
+
+body.restaurants{
+                    background:url("https://i.imgur.com/4oJnQ7J.jpg");
+                    background-size: 100%;
+}
+body.categories{
+                    background:url("https://i.imgur.com/hAgLreH.jpg");
+                    background-size: cover;
+}
+body.nationalities{
+                    background:url("https://i.imgur.com/lyeHkPF.jpg");
+                    background-size: cover;
+}
+body.dishes{
+                    background:url("https://i.imgur.com/8hTG73S.jpg");
+                    background-size: cover;
+}
+body.session{
+                    background:url("https://i.imgur.com/EYJrF4s.jpg");
+                    background-size: cover;
+}
+body.users{
+                    background:url("https://i.imgur.com/tZCGsqO.jpg");
+                    background-size: cover;
+}
+
+.navbar{
+       font-size: 25px;
+      }
+
+      .input-group {
+        color:white;
+        font-style: italic;
+        font-size: 20px;
+      }

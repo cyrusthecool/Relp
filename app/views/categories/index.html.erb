@@ -1,0 +1,13 @@
+<h1 class="rname">All Categories</h1>
+
+<% @categories.each do |category| %>
+  <p>
+  <%= link_to category.name, category_path(category.id) , :class=> "rlink"%>
+<% end %>
+
+
+<% if @current_user.present? && @current_user.admin? %>
+<div class="controls">
+  <%= link_to "New category", new_category_path(@category) %>
+</div>
+<% end %>

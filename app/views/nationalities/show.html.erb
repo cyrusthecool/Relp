@@ -1,0 +1,26 @@
+
+<h1 class="rname"><%= @nationality.name %></h1>
+
+<%= image_tag @nationality.flag_image, :class => 'feature' unless @nationality.flag_image.nil? %>
+
+
+<ul class = "rtext">
+
+  <li>Famous Food: <%= @nationality.famous_food %></li>
+  <li>Food History: <%= @nationality.food_history %></li>
+
+
+</ul>
+  <p class = "stext"> Restaurants:</p>
+<% @nationality.restaurants.each do |restaurant| %>
+  <p>
+  <%= link_to restaurant.name, restaurant_path(restaurant.id) %>
+  </p>
+<% end %>
+
+<% if @current_user.present? && @current_user.admin? %>
+<div class="controls">
+  <%= link_to "Edit nationality", edit_nationality_path(@nationality) %>
+  <%= link_to "Delete nationality", nationality_path(@nationality), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>
+<% end %>
